@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>منيو Caffe Magnelli</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f0fa; /* خلفية بنفسجية فاتحة */
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            height: 100%; /* لضمان أن الصفحة تأخذ كامل الارتفاع */
+            overflow: hidden; /* منع التمرير */
+        }
+
+        .menu-container {
+            width: 100%; /* العرض الكامل */
+            height: 100vh; /* العرض والارتفاع الكامل للصفحة */
+            padding: 20px;
+            background-color: #ffffff; /* خلفية بيضاء */
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            flex-wrap: wrap; /* لضمان أنه لو الصفحة صغيرة سيتم توزيع المحتوى بشكل جيد */
+            overflow-y: auto; /* السماح بالتمرير عموديًا */
+        }
+
+        h1 {
+            text-align: center;
+            color: #6a1b9a; /* بنفسجي داكن */
+            margin-bottom: 20px;
+            width: 100%;
+        }
+
+        .menu-column {
+            flex: 1;
+            min-width: 300px; /* الحد الأدنى لعرض الأعمدة */
+            height: 100%; /* تأكد من أن الأعمدة تأخذ كامل الارتفاع */
+            overflow-y: auto; /* التمرير العمودي إذا لزم الأمر */
+        }
+
+        .menu-column h2 {
+            color: #6a1b9a; /* بنفسجي داكن */
+            border-bottom: 2px dotted #c1a3d2; /* بنفسجي فاتح */
+            padding-bottom: 5px;
+            margin-bottom: 20px;
+        }
+
+        .menu-item {
+            margin: 10px 0;
+        }
+
+        .menu-item h3 {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 0;
+            color: #4a148c; /* بنفسجي أكثر كثافة */
+        }
+
+        .price {
+            color: #d4af37; /* ذهبي */
+            font-weight: bold;
+        }
+
+        .separator {
+            border-left: 2px dotted #6a1b9a; /* بنفسجي داكن */
+            margin: 0 20px;
+        }
+
+        /* Media Queries لجعل الصفحة أكثر استجابة */
+        @media (max-width: 768px) {
+            .menu-container {
+                flex-direction: column; /* تكديس الأعمدة عموديًا في الشاشات الصغيرة */
+            }
+
+            .separator {
+                display: none; /* إخفاء الفاصل بين الأعمدة في الشاشات الصغيرة */
+            }
+
+            .menu-column {
+                min-width: 100%; /* جعل الأعمدة تأخذ كامل العرض في الشاشات الصغيرة */
+                margin-bottom: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>منيو Caffe Magnelli</h1>
+        <div class="menu-container">
+            <!-- العمود الأيمن -->
+            <div class="menu-column">
+                <h2>مشروبات ساخنة</h2>
+                <div class="menu-item">
+                    <h3>قهوة عربية <span class="price">5 ريال</span></h3>
+                </div>
+                <div class="menu-item">
+                    <h3>نسكافيه <span class="price">10 ريال</span></h3>
+                </div>
+                <div class="menu-item">
+                    <h3>موكا <span class="price">10 ريال</span></h3>
+                </div>
+                <div class="menu-item">
+                    <h3>هوت شوكلت <span class="price">10 ريال</span></h3>
+                </div>
+                <div class="menu-item">
+                    <h3>هوت لوتس <span class="price">10 ريال</span></h3>
+                </div>
+                <div class="menu-item">
+                    <h3>هوت سنكرز <span class="price">10 ريال</span></h3>
+                </div>
+                <div class="menu-item">
+                    <h3>هوت اوريو <span class="price">10 ريال</span></h3>
+                </div>
+                <div class="menu-item">
+                    <h3>شوكو/كاكاو <span class="price">10 ريال</span></h3>
+                </div>
+                <div class="menu-item">
+                    <h3>بندق <span class="price">10 ريال</span></h3>
+                </div>
+                <div class="menu-item">
+                    <h3>فرنش فانيل <span class="price">10 ريال</span></h3>
+                </div>
+                <div class="menu-item">
+                    <h3>سحلب <span class="price">10 ريال</span></h3>
+                </div>
+            </div>
+
+            <!-- الفاصل -->
+            <div class="separator"></div>
+
+            <!-- العمود الأيسر -->
+            <div class="menu-column">
+                <h2>إسبرسو</h2>
+                <div class="menu-item">
+                    <h3>إسبرسو <span class="price">8 ريال</span></h3>
+                </div>
+                <div class="menu-item">
+                    <h3>دوبل إسبرسو <span class="price">14 ريال</span></h3>
+                </div>
+
+                <h2>آيسات</h2>
+                <div class="menu-item">
+                    <h3>آيس لاتيه <span class="price">14 ريال</span></h3>
+                </div>
+                <div class="menu-item">
+                    <h3>آيس أمريكانو <span class="price">10 ريال</span></h3>
+                </div>
+
+                <h2>ميلك شيك</h2>
+                <div class="menu-item">
+                    <h3>ميلك شيك فراولة <span class="price">15 ريال</span></h3>
+                </div>
+
+                <h2>كوكتيل</h2>
+                <div class="menu-item">
+                    <h3>كوكتيل فراولة <span class="price">12 ريال</span></h3>
+                </div>
+                <div class="menu-item">
+                    <h3>كوكتيل مانجو <span class="price">12 ريال</span></h3>
+                </div>
+                <div class="menu-item">
+                    <h3>كوكتيل أناناس <span class="price">12 ريال</span></h3>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
